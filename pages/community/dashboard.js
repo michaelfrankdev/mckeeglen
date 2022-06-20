@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import { Col, Container, Row } from 'react-bootstrap';
-import styles from '../../styles/Dashboard.module.css'
+import Head from "next/head";
+import { Col, Container, Row } from "react-bootstrap";
+import styles from "../../styles/Dashboard.module.css"
 
 const Dashboard = () => {
   return ( 

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import { Col, Container, Row } from "react-bootstrap";
 
 const Announcements = () => {
