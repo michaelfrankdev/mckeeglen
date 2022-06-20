@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 import { Nav, Tab, Form, Button } from "react-bootstrap";
 
 const AccessHandler = () => {
