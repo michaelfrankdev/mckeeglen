@@ -12,7 +12,7 @@ export default function Home() {
       <Container>
         <Row>
           <Col>
-            <h1 className={styles.heading}>Welcome!</h1>
+            <h1 className={styles.heading}>Welcome</h1>
           </Col>
         </Row>
         <Row>
