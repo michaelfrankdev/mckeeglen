@@ -16,11 +16,11 @@ export default function Home() {
           </Col>
         </Row>
         <Row>
-          <Col md={{ span:5, offset: 3}}>
+          <Col lg={{ span: 6, offset: 3 }} md={{ span: 8, offset: 2 }} sm={12}>
             <AccessHandler></AccessHandler>
           </Col>
         </Row>
       </Container>
     </>
-  )
+  );
 }

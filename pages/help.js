@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>McKee Glen HOA | Page Not Found</title>
+        <title>McKee Glen HOA | Site Help</title>
       </Head>
       <Container>
         <Row>
