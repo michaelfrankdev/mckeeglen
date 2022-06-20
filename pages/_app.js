@@ -1,8 +1,7 @@
-import { SSRProvider } from "react-bootstrap";
-import Layout from "../components/Layout/Scaffold";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/globals.css"
-
+import { SSRProvider } from 'react-bootstrap';
+import Layout from '../components/Layout/Scaffold';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,4 +13,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,7 +1,7 @@
-import Head from "next/head"
-import { Col, Container, Row } from "react-bootstrap"
-import AccessHandler from "../components/AccessHandler/AccessHandler"
-import styles from "../styles/Home.module.css"
+import Head from 'next/head';
+import { Col, Container, Row } from 'react-bootstrap';
+import AccessHandler from '../components/AccessHandler/AccessHandler';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
