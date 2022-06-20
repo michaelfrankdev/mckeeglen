@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Nav, Tab, Form, Button } from "react-bootstrap";
 
 const AccessHandler = () => {
@@ -49,7 +50,7 @@ const AccessHandler = () => {
               </Form.Label>
               <Form.Control type='text' placeholder='1234' />
               <Form.Text className='text-muted'>
-                Enter your Street Number, the numbers of your Street Address.
+                Enter your Street Number, the number(s) of your Street Address.
               </Form.Text>
             </Form.Group>
 
@@ -59,7 +60,7 @@ const AccessHandler = () => {
               </Form.Label>
               <Form.Control type='email' placeholder='username@email.com' />
               <Form.Text className='text-muted'>
-                Enter the Email Address you provided to the Management Company.
+                Enter the Email Address associated with your Street Address.
               </Form.Text>
             </Form.Group>
 
@@ -69,7 +70,7 @@ const AccessHandler = () => {
               </Form.Label>
               <Form.Control type='password' placeholder='********' />
               <Form.Text className='text-muted'>
-                Create a password that is more than four characters long.
+                Create a user password. Use <Link href="/help">these guidelines</Link> for setting a password.
               </Form.Text>
             </Form.Group>
 
