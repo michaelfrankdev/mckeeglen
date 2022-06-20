@@ -70,7 +70,7 @@ const AccessHandler = () => {
               </Form.Label>
               <Form.Control type='password' placeholder='********' />
               <Form.Text className='text-muted'>
-                Create a user password. Use <Link href="/help">these guidelines</Link> for setting a password.
+                Create a user password. Use <Link href="/help#creatingPasswords">these guidelines</Link> for setting a password.
               </Form.Text>
             </Form.Group>
 
