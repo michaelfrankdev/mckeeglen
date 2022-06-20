@@ -1,10 +1,10 @@
-import RegisteredNav from '../Navigation/Registered'
-import Footer from './Footer'
+import GuestNav from "../Navigation/Guest"
+import Footer from "./Footer"
 
-const LayoutMain = ({children}) => {
+const Layout = ({children}) => {
   return ( 
     <div className="layoutContainer">
-      <RegisteredNav/>
+      <GuestNav/>
       <main className="content">
         {children}
       </main>
@@ -15,4 +15,4 @@ const LayoutMain = ({children}) => {
    );
 }
  
-export default LayoutMain;
+export default Layout;

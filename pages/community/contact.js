@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import { Col, Container, Row } from 'react-bootstrap'
+import Head from "next/head"
+import { Col, Container, Row } from "react-bootstrap"
 
 const Contact = () => {
   return ( 
