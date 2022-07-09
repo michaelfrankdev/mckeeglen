@@ -1,5 +1,5 @@
 import { Col, Container, Row } from 'react-bootstrap'
-import LoginPanel from '../components/LoginPanel'
+import RegisterPanel from '../components/Register'
 
 export default function Home() {
   return (
@@ -21,8 +21,8 @@ export default function Home() {
           </p>
         </Col>
         <Col md={4}>
-          <h2>Community Login</h2>
-          <LoginPanel />
+          <h2>Register</h2>
+          <RegisterPanel />
         </Col>
       </Row>
     </Container>
