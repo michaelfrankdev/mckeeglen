@@ -16,8 +16,8 @@ const RegisterPanel = () => {
 
   // INITIALIZE STATE FOR FORM ERRORS
   const [formErrors, setFormErrors] = useState({
-    email: 'string',
-    password: 'string',
+    email: '',
+    password: '',
   })
 
   // INITIALIZE STATE FOR SUBMIT STATUS

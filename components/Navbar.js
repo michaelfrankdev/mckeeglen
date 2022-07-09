@@ -19,8 +19,11 @@ const Navigation = () => {
                   {user.email}
                 </Dropdown.Toggle>
                 <Dropdown.Menu align="end">
-                  <Link href="/faq" passHref>
-                    <Dropdown.Item href="/faq">Community FAQ</Dropdown.Item>
+                  <Link href="/" passHref>
+                    <Dropdown.Item href="/">Home</Dropdown.Item>
+                  </Link>
+                  <Link href="/about" passHref>
+                    <Dropdown.Item href="/about">About</Dropdown.Item>
                   </Link>
                   <Link href="/dashboard" passHref>
                     <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
@@ -28,8 +31,8 @@ const Navigation = () => {
                   <Link href="/documents" passHref>
                     <Dropdown.Item href="/documents">Documents</Dropdown.Item>
                   </Link>
-                  <Link href="/help" passHref>
-                    <Dropdown.Item href="/help">Website Help</Dropdown.Item>
+                  <Link href="/faq" passHref>
+                    <Dropdown.Item href="/faq">Community FAQ</Dropdown.Item>
                   </Link>
                   <Dropdown.Divider />
                   <Link href="passRef">
@@ -51,14 +54,20 @@ const Navigation = () => {
                   </Nav.Link>
                 </Link>
                 <Link href="/about" passHref>
-                  <Nav.Link href="/about">About</Nav.Link>
+                  <Nav.Link className={router.pathname == '/about' ? 'nav-link active' : ''} href="/about">
+                    About
+                  </Nav.Link>
                 </Link>
                 <Link href="/faq" passHref>
-                  <Nav.Link href="/faq">Community FAQ</Nav.Link>
+                  <Nav.Link className={router.pathname == '/faq' ? 'nav-link active' : ''} href="/faq">
+                    Community FAQ
+                  </Nav.Link>
                 </Link>
-                <Link href="/register" passHref>
-                  <Nav.Link href="/register">Register</Nav.Link>
-                </Link>
+                {/* <Link href="/register" passHref>
+                  <Nav.Link className={router.pathname == '/register' ? 'nav-link active' : ''} href="/register">
+                    Register
+                  </Nav.Link>
+                </Link> */}
               </>
             )}
           </Nav>
