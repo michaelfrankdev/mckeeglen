@@ -25,11 +25,20 @@ const Navigation = () => {
                   <Link href="/about" passHref>
                     <Dropdown.Item href="/about">About</Dropdown.Item>
                   </Link>
+                  <Link href="/contact" passHref>
+                    <Dropdown.Item href="/contact">Contact</Dropdown.Item>
+                  </Link>
                   <Link href="/dashboard" passHref>
                     <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
                   </Link>
                   <Link href="/documents" passHref>
                     <Dropdown.Item href="/documents">Documents</Dropdown.Item>
+                  </Link>
+                  <Link href="/announcements" passHref>
+                    <Dropdown.Item href="/announcements">Announcements</Dropdown.Item>
+                  </Link>
+                  <Link href="/newsletters" passHref>
+                    <Dropdown.Item href="/newsletters">Newsletters</Dropdown.Item>
                   </Link>
                   <Link href="/faq" passHref>
                     <Dropdown.Item href="/faq">Community FAQ</Dropdown.Item>
