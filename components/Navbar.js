@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, Dropdown } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
