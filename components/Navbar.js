@@ -7,54 +7,49 @@ const Navigation = () => {
   const { user, logout } = useAuth()
   const router = useRouter()
   return (
-    <Navbar bg="light" expand="lg" fixed="top">
+    <Navbar bg="light" expand="false" fixed="top" collapseOnSelect="true">
       <Container>
         <Navbar.Brand>Pond at McKee Glen</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+        {user ? <Navbar.Text className="ms-auto">Signed in as: {user.email}</Navbar.Text> : ''}
+        <Navbar.Toggle aria-controls="primary-navigation" />
+        <Navbar.Collapse id="primary-navigation">
+          <Nav>
             {user ? (
-              <Dropdown>
-                <Dropdown.Toggle variant="light" id="dropdown-basic" size="sm">
-                  {user.email}
-                </Dropdown.Toggle>
-                <Dropdown.Menu align="end">
-                  <Link href="/" passHref>
-                    <Dropdown.Item href="/">Home</Dropdown.Item>
-                  </Link>
-                  <Link href="/about" passHref>
-                    <Dropdown.Item href="/about">About</Dropdown.Item>
-                  </Link>
-                  <Link href="/contact" passHref>
-                    <Dropdown.Item href="/contact">Contact</Dropdown.Item>
-                  </Link>
-                  <Link href="/dashboard" passHref>
-                    <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
-                  </Link>
-                  <Link href="/documents" passHref>
-                    <Dropdown.Item href="/documents">Documents</Dropdown.Item>
-                  </Link>
-                  <Link href="/announcements" passHref>
-                    <Dropdown.Item href="/announcements">Announcements</Dropdown.Item>
-                  </Link>
-                  <Link href="/newsletters" passHref>
-                    <Dropdown.Item href="/newsletters">Newsletters</Dropdown.Item>
-                  </Link>
-                  <Link href="/faq" passHref>
-                    <Dropdown.Item href="/faq">Community FAQ</Dropdown.Item>
-                  </Link>
-                  <Dropdown.Divider />
-                  <Link href="passRef">
-                    <Dropdown.Item
-                      onClick={() => {
-                        logout()
-                        router.push('/')
-                      }}>
-                      Logout
-                    </Dropdown.Item>
-                  </Link>
-                </Dropdown.Menu>
-              </Dropdown>
+              <>
+                <Link href="/" passHref>
+                  <Nav.Link href="/">Home</Nav.Link>
+                </Link>
+                <Link href="/about" passHref>
+                  <Nav.Link href="/about">About</Nav.Link>
+                </Link>
+                <Link href="/contact" passHref>
+                  <Nav.Link href="/contact">Contact</Nav.Link>
+                </Link>
+                <Link href="/dashboard" passHref>
+                  <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                </Link>
+                <Link href="/documents" passHref>
+                  <Nav.Link href="/documents">Documents</Nav.Link>
+                </Link>
+                <Link href="/announcements" passHref>
+                  <Nav.Link href="/announcements">Announcements</Nav.Link>
+                </Link>
+                <Link href="/newsletters" passHref>
+                  <Nav.Link href="/newsletters">Newsletters</Nav.Link>
+                </Link>
+                <Link href="/faq" passHref>
+                  <Nav.Link>Community FAQ</Nav.Link>
+                </Link>
+                <Link href="/#" passHref>
+                  <Nav.Link
+                    onClick={() => {
+                      logout()
+                      router.push('/')
+                    }}>
+                    Logout
+                  </Nav.Link>
+                </Link>
+              </>
             ) : (
               <>
                 <Link href="/" passHref>

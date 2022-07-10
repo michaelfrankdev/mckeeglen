@@ -1,23 +1,35 @@
-import { Col, Container, Row } from 'react-bootstrap'
+import { Accordion, Col, Container, Row } from 'react-bootstrap'
 
 const Faq = () => {
   return (
     <Container>
       <Row>
-        <Col>
-          <h2 className="unprotected">Frequently Asked Questions</h2>
+        <Col className="panel">
+          <h2 className="page-heading unprotected">Frequently Asked Questions</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
             repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
           </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-            repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-            repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
-          </p>
+          <Accordion defaultActiveKey="none">
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</Accordion.Header>
+              <Accordion.Body>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae
+                  praesentium repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
+                </p>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</Accordion.Header>
+              <Accordion.Body>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae
+                  praesentium repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
+                </p>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
         </Col>
       </Row>
     </Container>

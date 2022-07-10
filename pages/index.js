@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <Container>
       <Row>
-        <Col>
-          <h2 className="unprotected">Welcome!</h2>
+        <Col className="panel">
+          <h2 className="page-heading unprotected">Welcome!</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
             repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
@@ -25,8 +25,8 @@ export default function Home() {
         {user ? (
           ''
         ) : (
-          <Col md={4}>
-            <h2>Login</h2>
+          <Col className="panel" md={4}>
+            <h2 className="page-heading unprotected">Login</h2>
             <LoginPanel />
           </Col>
         )}

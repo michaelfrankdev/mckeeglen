@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <Container>
       <Row>
-        <Col>
-          <h2>Welcome!</h2>
+        <Col className="panel">
+          <h2 className="page-heading unprotected">Welcome!</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
             repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
