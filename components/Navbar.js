@@ -31,9 +31,6 @@ const Navigation = () => {
                 <Link href="/documents" passHref>
                   <Nav.Link href="/documents">Documents</Nav.Link>
                 </Link>
-                <Link href="/announcements" passHref>
-                  <Nav.Link href="/announcements">Announcements</Nav.Link>
-                </Link>
                 <Link href="/newsletters" passHref>
                   <Nav.Link href="/newsletters">Newsletters</Nav.Link>
                 </Link>
