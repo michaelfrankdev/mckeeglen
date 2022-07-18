@@ -159,10 +159,6 @@ $umber-2: rgba(89, 71, 54, 1); */
   filter: contrast(40%) brightness(50%);
 }
 
-.accordion-item:last-of-type {
-  border-radius: none;
-}
-
 .footer {
   padding: 20px 0px;
   text-align: center;
