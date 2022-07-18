@@ -1,16 +1,38 @@
-html,
+/* THEME COLOR PALATE: https://coolors.co/5f6b25-63553f-c2aa90-e1c09c-594736
+
+CSS HEX
+--dark-olive-green: #5F6B25ff;
+--umber: #63553Fff;
+--khaki-web: #C2AA90ff;
+--tan: #E1C09Cff;
+--umber-2: #594736ff;
+
+SCSS RGB
+$dark-olive-green: rgba(95, 107, 37, 1);
+$umber: rgba(99, 85, 63, 1);
+$khaki-web: rgba(194, 170, 144, 1);
+$tan: rgba(225, 192, 156, 1);
+$umber-2: rgba(89, 71, 54, 1);
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
 body {
-  padding: 40px 0px 10px;
+  padding: 56px 0px 0px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: rgba(225, 192, 156, 0.7);
 }
 
-body {
-  background-image: url('../public/images/fullCanvasPhotoExp.jpg');
+.primaryHeader {
+  height: 300px;
+  width: 100%;
+  background-image: url('../public/images/pamc-hp-entrance-edit.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+  background-attachment: scroll;
   background-size: cover;
 }
 
@@ -23,6 +45,81 @@ a {
   box-sizing: border-box;
 }
 
+.page-header {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.page-heading {
+  font-family: 'Noto Serif', serif;
+  border-bottom: 1px solid rgb(99, 85, 63);
+  padding-bottom: 10px;
+  color: rgb(95, 107, 37)
+}
+
+
+/* REACT-BOOTSTRAP STYLE OVERRIDES - NAVBAR */
+
+.navbar {
+  background-color: rgb(89, 71, 54);
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-brand:hover {
+  font-family: 'Noto Serif', serif;
+  color: rgb(194, 170, 144);
+}
+
+.navbar .navbar-toggler {
+  border-color: rgb(194, 170, 144);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: rgb(194, 170, 144);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: rgb(225, 192, 156);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:active {
+  color: rgb(225, 192, 156);
+  filter: brightness(110%)
+}
+
+/* USER "SIGNED IN" AS TEXT TAG, WHEN ACTIVATED */
+
+.navbar-text {
+  padding-right: 30px;
+}
+
+/* REACT-BOOTSTRAP STYLE OVERRIDES - INPUTS, FORM-CONTROL */
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgb(225, 192, 156);
+  box-shadow: 0 0 0 .25rem rgba(225, 192, 156, 0.6);
+}
+
+.formSubmitButton {
+  background-color: rgb(95, 107, 37);
+  border: none;
+  color: rgb(225, 192, 156);
+}
+
+.formSubmitButton:hover,
+.formSubmitButton:focus,
+.formSubmitButton:active {
+  background-color: rgb(95, 107, 37);
+  color: rgb(225, 255, 255);
+}
+
+.formSubmitButton:focus {
+  box-shadow: 0 0 0 .25rem rgba(95, 107, 37, 0.3);
+}
+
 .error-message {
   min-height: 30px;
   padding-top: 6px;
@@ -31,32 +128,47 @@ a {
   color: red;
 }
 
-h2.page-heading {
-  border-bottom: 1px solid #cecece;
-  padding-bottom: 20px;
-}
+/* REACT-BOOTSTRAP STYLE OVERRIDES - ACCORDION, HEADER, ITEM */
 
-h2.protected {
-  color: red;
-}
+/* $dark-olive-green: rgba(95, 107, 37, 1);
+$umber: rgba(99, 85, 63, 1);
+$khaki-web: rgba(194, 170, 144, 1);
+$tan: rgba(225, 192, 156, 1);
+$umber-2: rgba(89, 71, 54, 1); */
 
-h2.unprotected {
-  color: green;
-}
-
-.panel {
-  padding: 20px 40px 40px;
-  background-color: rgba(240, 240, 240, 0.8);
+.accordion-button:focus {
+  border-color: rgb(225, 192, 156);
+  box-shadow: 0 0 0 .25rem rgba(225, 192, 156, 0.6);
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: rgba(225, 192, 156, 1);
+  color: rgba(89, 71, 54, 1);
 }
 
-.navbar-text {
-  padding-right: 30px;
+.accordion-button:not(.collapsed)::after {
+  filter: contrast(40%) brightness(50%);
 }
 
-.navbar-nav {
-  text-align: right;
+.accordion-button.collapsed {
+  background-color: rgba(194, 170, 144, 1);
+  color: rgba(89, 71, 54, 1);
+}
+
+.accordion-button.collapsed::after {
+  filter: contrast(40%) brightness(50%);
+}
+
+.accordion-item:last-of-type {
+  border-radius: none;
+}
+
+.footer {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.footer .footer-statement {
+  font-size: 12px;
+  color: rgba(99, 85, 63, 1);
 }

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../../context/AuthContext'
 
 const LoginPanel = () => {
   const { user, login } = useAuth()
@@ -10,8 +10,8 @@ const LoginPanel = () => {
 
   // INITIALIZE STATE FOR FORM DATA
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: 'admin@test.com',
+    password: 'password',
   })
 
   // INITIALIZE STATE FOR FORM ERRORS
@@ -138,7 +138,7 @@ const LoginPanel = () => {
         <div id="loginEmailError" className="error-message">
           {formErrors.password}
         </div>
-        <Button variant="primary" type="submit">
+        <Button className="formSubmitButton" type="submit">
           Login
         </Button>
       </Form>

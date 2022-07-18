@@ -9,8 +9,12 @@ const About = () => {
       </Head>
       <Container>
         <Row>
-          <Col className="panel">
-            <h2 className="page-heading unprotected">About</h2>
+          <Col className="page-header">
+            <h2 className="page-heading">About</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
               repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!

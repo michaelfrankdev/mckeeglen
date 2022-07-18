@@ -9,12 +9,16 @@ const Faq = () => {
       </Head>
       <Container>
         <Row>
-          <Col className="panel">
-            <h2 className="page-heading unprotected">Frequently Asked Questions</h2>
+          <Col className="page-header">
+            <h2 className="page-heading">Frequently Asked Questions</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
               repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
             </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <Accordion defaultActiveKey="none">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Lorem ipsum dolor, sit amet consectetur adipisicing elit?</Accordion.Header>

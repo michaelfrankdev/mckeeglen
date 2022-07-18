@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../../context/AuthContext'
 
 const RegisterPanel = () => {
   const { user, signup } = useAuth()
@@ -138,7 +138,7 @@ const RegisterPanel = () => {
         <div id="signupEmailError" className="error-message">
           {formErrors.password}
         </div>
-        <Button variant="primary" type="submit">
+        <Button className="formSubmitButton" type="submit">
           Login
         </Button>
       </Form>
