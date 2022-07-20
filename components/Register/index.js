@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap'
 import { useAuth } from '../../context/AuthContext'
 
 const RegisterPanel = () => {
-  const { user, signup } = useAuth()
+  const { signup } = useAuth()
   const router = useRouter()
   const errors = {}
 
@@ -18,6 +18,8 @@ const RegisterPanel = () => {
   const [formErrors, setFormErrors] = useState({
     email: '',
     password: '',
+    emailValid: '',
+    passwordValid: '',
   })
 
   // INITIALIZE STATE FOR SUBMIT STATUS
@@ -44,27 +46,30 @@ const RegisterPanel = () => {
         console.log(error.message)
         switch (error.code) {
           case 'auth/invalid-email':
-            // WORKS!
             setFormErrors({
               ...formErrors,
               email: 'Firebase: The email address is not valid.',
               password: '',
-            })
-            break
-          case 'auth/weak-password':
-            // WORKS!
-            setFormErrors({
-              ...formErrors,
-              email: '',
-              password: 'Firebase: Please set a password greater than six characters.',
+              emailValid: false,
+              passwordValid: true,
             })
             break
           case 'auth/email-already-in-use':
-            // WORKS!
             setFormErrors({
               ...formErrors,
               email: 'Firebase: Email address is already registered.',
               password: '',
+              emailValid: false,
+              passwordValid: true,
+            })
+            break
+          case 'auth/weak-password':
+            setFormErrors({
+              ...formErrors,
+              email: '',
+              password: 'Firebase: Please set a password greater than six characters.',
+              emailValid: true,
+              passwordValid: false,
             })
             break
           default:
@@ -78,12 +83,15 @@ const RegisterPanel = () => {
 
   // VALIDATE LOGIN INPUT VALUES
   const validate = (formDataInput) => {
-    // PUT REGEX FOR EMAIL ADDRESS TEST HERE
-    if (!formDataInput.email) {
+    const regExr = /^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/g
+    if (!formDataInput.email.match(regExr)) {
+      // if (!formDataInput.email) {
       errors.email = 'An email address is required.'
+      errors.emailValid = false
     }
     if (!formDataInput.password) {
       errors.password = 'A password is required.'
+      errors.passwordValid = false
     }
     return errors
   }
@@ -102,10 +110,12 @@ const RegisterPanel = () => {
         paddingTop: '20px',
       }}>
       {/* <pre>{JSON.stringify(formData, undefined, 2)}</pre> */}
+      <h5 className="page-heading">Register</h5>
       <Form onSubmit={handleSignup}>
         <Form.Group controlId="signupEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            className={formErrors.emailValid === false ? 'error-control' : 'form-control'}
             onChange={(e) =>
               setFormData({
                 ...formData,
@@ -124,6 +134,7 @@ const RegisterPanel = () => {
         <Form.Group controlId="signupPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className={formErrors.passwordValid === false ? 'error-control' : 'form-control'}
             onChange={(e) =>
               setFormData({
                 ...formData,

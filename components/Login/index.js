@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap'
 import { useAuth } from '../../context/AuthContext'
 
 const LoginPanel = () => {
-  const { user, login } = useAuth()
+  const { login } = useAuth()
   const router = useRouter()
   const errors = {}
 
@@ -18,6 +18,8 @@ const LoginPanel = () => {
   const [formErrors, setFormErrors] = useState({
     email: '',
     password: '',
+    emailValid: '',
+    passwordValid: '',
   })
 
   // INITIALIZE STATE FOR SUBMIT STATUS
@@ -25,17 +27,16 @@ const LoginPanel = () => {
 
   // PROCESS LOGIN INPUT & DATA
   const handleLogin = async (e) => {
-    console.clear()
-    console.log('form submission attempted ...')
     e.preventDefault()
+    console.log('form submission attempted ...')
 
     setFormErrors(validate(formData))
 
     setIsSubmit(true)
 
     if (Object.keys(errors).length === 0) {
-      console.log('form transmission attempted ...')
       try {
+        console.log('form transmission attempted ...')
         await login(formData.email, formData.password)
         router.push('/dashboard')
       } catch (error) {
@@ -48,6 +49,8 @@ const LoginPanel = () => {
               ...formErrors,
               email: 'Firebase: Email address not found.',
               password: '',
+              emailValid: false,
+              passwordValid: true,
             })
             break
           case 'auth/invalid-email':
@@ -55,14 +58,19 @@ const LoginPanel = () => {
               ...formErrors,
               email: 'Firebase: The email address is not valid.',
               password: '',
+              emailValid: false,
+              passwordValid: true,
             })
-            break
+            errors.break
           case 'auth/wrong-password':
             setFormErrors({
               ...formErrors,
               email: '',
               password: 'Firebase: Incorrect password. Please try again.',
+              emailValid: true,
+              passwordValid: false,
             })
+
             break
           case 'auth/too-many-requests':
             alert('Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later. (auth/too-many-requests)')
@@ -81,9 +89,11 @@ const LoginPanel = () => {
     // PUT REGEX FOR EMAIL ADDRESS TEST HERE
     if (!formDataInput.email) {
       errors.email = 'An email address is required.'
+      errors.emailValid = false
     }
     if (!formDataInput.password) {
       errors.password = 'A password is required.'
+      errors.passwordValid = false
     }
     return errors
   }
@@ -101,11 +111,14 @@ const LoginPanel = () => {
         margin: 'auto',
         paddingTop: '20px',
       }}>
+      {/* <pre>{JSON.stringify(formErrors, null, 2)}</pre> */}
       {/* <pre>{JSON.stringify(formData, undefined, 2)}</pre> */}
+      <h5 className="page-heading">Login</h5>
       <Form onSubmit={handleLogin}>
         <Form.Group controlId="loginEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            className={formErrors.emailValid === false ? 'error-control' : 'form-control'}
             onChange={(e) =>
               setFormData({
                 ...formData,
@@ -124,6 +137,7 @@ const LoginPanel = () => {
         <Form.Group controlId="loginPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className={formErrors.passwordValid === false ? 'error-control' : 'form-control'}
             onChange={(e) =>
               setFormData({
                 ...formData,

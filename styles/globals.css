@@ -89,43 +89,52 @@ a {
   filter: brightness(110%)
 }
 
-/* USER "SIGNED IN" AS TEXT TAG, WHEN ACTIVATED */
-
-.navbar-text {
-  padding-right: 30px;
-}
-
 /* REACT-BOOTSTRAP STYLE OVERRIDES - INPUTS, FORM-CONTROL */
 
 .form-control:focus,
 .form-select:focus {
   border-color: rgb(225, 192, 156);
-  box-shadow: 0 0 0 .25rem rgba(225, 192, 156, 0.6);
+  box-shadow: 0 0 0 .05rem rgba(225, 192, 156, 0.6);
 }
 
 .formSubmitButton {
+  margin-top: 20px;
   background-color: rgb(95, 107, 37);
   border: none;
-  color: rgb(225, 192, 156);
+  color: rgba(225, 255, 255, 0.8);
+  letter-spacing: 0.4px;
 }
 
 .formSubmitButton:hover,
 .formSubmitButton:focus,
 .formSubmitButton:active {
   background-color: rgb(95, 107, 37);
-  color: rgb(225, 255, 255);
+  color: rgba(225, 255, 255, 0.8);
+  filter: brightness(120%)
 }
 
 .formSubmitButton:focus {
-  box-shadow: 0 0 0 .25rem rgba(95, 107, 37, 0.3);
+  box-shadow: 0 0 0 .05rem rgba(95, 107, 37, 0.6);
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(225, 255, 255, 0.25);
+  cursor: not-allowed;
+}
+
+.error-control {
+  border-color: red;
 }
 
 .error-message {
-  min-height: 30px;
-  padding-top: 6px;
-  margin-bottom: 10px;
+  height: 24px;
+  padding-top: 2px;
+  padding-bottom: 4px;
   font-size: 12px;
   color: red;
+  /* background-color: pink; */
 }
 
 /* REACT-BOOTSTRAP STYLE OVERRIDES - ACCORDION, HEADER, ITEM */
@@ -158,6 +167,8 @@ $umber-2: rgba(89, 71, 54, 1); */
 .accordion-button.collapsed::after {
   filter: contrast(40%) brightness(50%);
 }
+
+/* FOOTER STYLES */
 
 .footer {
   padding: 20px 0px;

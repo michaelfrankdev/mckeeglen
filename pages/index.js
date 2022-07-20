@@ -14,6 +14,10 @@ export default function Home() {
         <Row>
           <Col className="page-header">
             <h2 className="page-heading">Welcome!</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
               repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
@@ -30,8 +34,7 @@ export default function Home() {
           {user ? (
             ''
           ) : (
-            <Col className="page-header" md={4}>
-              <h2 className="page-heading unprotected">Login</h2>
+            <Col md={4}>
               <LoginPanel />
             </Col>
           )}
