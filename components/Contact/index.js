@@ -10,7 +10,7 @@ function ContactForm() {
   const initialState = {
     firstName: '',
     lastName: '',
-    emailAddress: '',
+    emailAddress: user.email,
     attentionField: '',
     messageSubject: '',
     enclosedMessage: '',
@@ -20,7 +20,7 @@ function ContactForm() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    emailAddress: '',
+    emailAddress: user.email,
     attentionField: '',
     messageSubject: '',
     enclosedMessage: '',
@@ -45,41 +45,28 @@ function ContactForm() {
   const handleSubmission = (event) => {
     event.preventDefault()
 
+    console.log('form submission initiated ...')
+
     setFormErrors(validate(formData))
 
     if (Object.keys(errors).length === 0) {
-      setFormData({ ...initialState })
-      console.log(formData)
-      // fetch(process.env.NEXT_PUBLIC_BASIN_FORM_ENDPOINT, {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify(formData),
-      // })
-      //   .then((response) => {
-      //     setFormData({
-      //       ...formData,
-      //       firstName: '',
-      //       lastName: '',
-      //       emailAddress: '',
-      //       attentionField: '',
-      //       messageSubject: '',
-      //       enclosedMessage: '',
-      //     })
-      //     console.log(response)
-      //     alert('Your message was sent successfully.')
-      //   })
-      //   .catch((error) => {
-      //     console.log('Error:', error)
-      //     switch (error.code) {
-      //       case 'some-response':
-      //         alert('A preventable error has occured. Please notify an administrator.')
-      //         break
-      //       default:
-      //         alert('A critical error has occured. Please notify an administrator.')
-      //     }
-      //   })
+      console.log('form submission transferring ...')
+      fetch(process.env.NEXT_PUBLIC_BASIN_FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          setFormData({ ...initialState })
+          console.log(response)
+          alert('Your message was sent successfully.')
+        })
+        .catch((error) => {
+          console.log('Error:', error)
+          alert('A critical error has occured. Please notify an administrator.')
+        })
     } else {
       console.log('form submission canceled ...')
     }
@@ -87,7 +74,6 @@ function ContactForm() {
 
   // VALIDATE LOGIN INPUT VALUES
   const validate = (formDataInput) => {
-    // const regExr = /^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/g
     if (!formDataInput.firstName) {
       errors.firstName = 'A first name is required to continue.'
       errors.firstNameValid = false
@@ -96,10 +82,6 @@ function ContactForm() {
       errors.lastName = 'A last name is required to continue.'
       errors.lastNameValid = false
     }
-    // if (!formDataInput.emailAddress.match(regExr)) {
-    //   errors.emailAddress = 'An email address is required to continue.'
-    //   errors.emailAddressValid = false
-    // }
     if (!formDataInput.attentionField) {
       errors.attentionField = 'A selection is required to continue.'
       errors.attentionFieldValid = false
@@ -117,9 +99,7 @@ function ContactForm() {
 
   return (
     <>
-      {/* <pre>{submitReady.toString()}</pre> */}
-      {/* <pre>{Object.keys(formData).length}</pre> */}
-      {/* <pre>{JSON.stringify(formData, null, 2)}</pre> */}
+      <pre>{JSON.stringify(formData, null, 2)}</pre>
       {/* <pre>Error State: {JSON.stringify(formErrors, null, 2)}</pre> */}
       <Form
         style={{
@@ -180,20 +160,7 @@ function ContactForm() {
           <Form.Label>
             Email Address<sup>*</sup>
           </Form.Label>
-          <Form.Control
-            className={formErrors.emailAddressValid === false ? 'error-control' : 'form-control'}
-            type="text"
-            // placeholder="username@domain.com"
-            // onChange={(e) =>
-            //   setFormData({
-            //     ...formData,
-            //     emailAddress: e.target.value,
-            //   })
-            // }
-            // value={formData.emailAddress}
-            readOnly
-            value={user.email}
-          />
+          <Form.Control className={formErrors.emailAddressValid === false ? 'error-control' : 'form-control'} type="text" readOnly value={user.email} />
           <div id="formEmailAddressError" className="error-message">
             {formErrors.emailAddress}
           </div>
