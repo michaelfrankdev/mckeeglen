@@ -6,11 +6,21 @@ function ContactForm() {
   const { user } = useAuth()
   const errors = {}
 
+  // INITIALIZE DEFAULT FORM STATE
+  const initialState = {
+    firstName: '',
+    lastName: '',
+    emailAddress: '',
+    attentionField: '',
+    messageSubject: '',
+    enclosedMessage: '',
+  }
+
   // INITIALIZE STATE FOR FORM DATA
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    emailAddress: user.email,
+    emailAddress: '',
     attentionField: '',
     messageSubject: '',
     enclosedMessage: '',
@@ -32,33 +42,44 @@ function ContactForm() {
     enclosedMessageValid: '',
   })
 
-  const handleSubmission = (e) => {
-    e.preventDefault()
+  const handleSubmission = (event) => {
+    event.preventDefault()
 
     setFormErrors(validate(formData))
 
     if (Object.keys(errors).length === 0) {
-      console.log('form transmission attempted ...')
-      fetch(process.env.NEXT_PUBLIC_BASIN_FORM_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-        .then((response) => {
-          console.log(response)
-        })
-        .catch((error) => {
-          console.log('Error:', error)
-          switch (error.code) {
-            case 'test-response':
-              alert('A preventable error has occured. Please notify an administrator.')
-              break
-            default:
-              alert('A critical error has occured. Please notify an administrator.')
-          }
-        })
+      setFormData({ ...initialState })
+      console.log(formData)
+      // fetch(process.env.NEXT_PUBLIC_BASIN_FORM_ENDPOINT, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(formData),
+      // })
+      //   .then((response) => {
+      //     setFormData({
+      //       ...formData,
+      //       firstName: '',
+      //       lastName: '',
+      //       emailAddress: '',
+      //       attentionField: '',
+      //       messageSubject: '',
+      //       enclosedMessage: '',
+      //     })
+      //     console.log(response)
+      //     alert('Your message was sent successfully.')
+      //   })
+      //   .catch((error) => {
+      //     console.log('Error:', error)
+      //     switch (error.code) {
+      //       case 'some-response':
+      //         alert('A preventable error has occured. Please notify an administrator.')
+      //         break
+      //       default:
+      //         alert('A critical error has occured. Please notify an administrator.')
+      //     }
+      //   })
     } else {
       console.log('form submission canceled ...')
     }
@@ -96,9 +117,9 @@ function ContactForm() {
 
   return (
     <>
-      {/* <pre>{submitReady.toString()}</pre>
-      <pre>{Object.keys(formData).length}</pre>
-      <pre>{JSON.stringify(formData, null, 2)}</pre> */}
+      {/* <pre>{submitReady.toString()}</pre> */}
+      {/* <pre>{Object.keys(formData).length}</pre> */}
+      {/* <pre>{JSON.stringify(formData, null, 2)}</pre> */}
       {/* <pre>Error State: {JSON.stringify(formErrors, null, 2)}</pre> */}
       <Form
         style={{
@@ -189,7 +210,8 @@ function ContactForm() {
                 attentionField: e.target.value,
               })
             }
-            defaultValue="Please select an option ...">
+            // USE A TERNARY OPERATOR HERE TO DETERMINE WHAT TO PLACE
+            value={formData.attentionField ? formData.attentionField : 'Please select an option ...'}>
             <option disabled>Please select an option ...</option>
             <option value="McKee Glen HOA Board">McKee Glen HOA Board</option>
             <option value="Hawthorne Management">Hawthorne Management</option>

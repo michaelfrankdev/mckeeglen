@@ -10,8 +10,8 @@ const LoginPanel = () => {
 
   // INITIALIZE STATE FOR FORM DATA
   const [formData, setFormData] = useState({
-    email: 'admin@test.com',
-    password: 'password',
+    email: '',
+    password: '',
   })
 
   // INITIALIZE STATE FOR FORM ERRORS
@@ -86,8 +86,9 @@ const LoginPanel = () => {
 
   // VALIDATE LOGIN INPUT VALUES
   const validate = (formDataInput) => {
-    // PUT REGEX FOR EMAIL ADDRESS TEST HERE
-    if (!formDataInput.email) {
+    const regExr = /^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/g
+    if (!formDataInput.email.match(regExr)) {
+      // if (!formDataInput.email) {
       errors.email = 'An email address is required.'
       errors.emailValid = false
     }

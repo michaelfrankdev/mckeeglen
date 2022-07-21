@@ -8,7 +8,6 @@ const PrimaryLayout = ({ children }) => {
     <>
       <Head>
         <link rel="shortcut icon" href="images/favicon.ico" />
-        <link rel="mask-icon" href="images/favicon.png" color="#ff0000" />
       </Head>
       <Navigation />
       <PrimaryHeader />
