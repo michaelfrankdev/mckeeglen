@@ -99,7 +99,7 @@ function ContactForm() {
 
   return (
     <>
-      <pre>{JSON.stringify(formData, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(formData, null, 2)}</pre> */}
       {/* <pre>Error State: {JSON.stringify(formErrors, null, 2)}</pre> */}
       <Form
         style={{
