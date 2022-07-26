@@ -106,12 +106,7 @@ const LoginPanel = () => {
   }, [formErrors, formData, isSubmit])
 
   return (
-    <div
-      style={{
-        width: '80%',
-        margin: 'auto',
-        paddingTop: '20px',
-      }}>
+    <div className="input-form">
       {/* <pre>{JSON.stringify(formErrors, null, 2)}</pre> */}
       {/* <pre>{JSON.stringify(formData, undefined, 2)}</pre> */}
       <h5 className="page-heading">Login</h5>

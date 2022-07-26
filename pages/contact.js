@@ -14,25 +14,26 @@ const Contact = () => {
       <Container>
         <Row>
           <Col className="page-header">
-            <h2 className="page-heading">Contact</h2>
+            <h2 className="page-heading">Contact Us</h2>
           </Col>
         </Row>
         <Row>
-          <Col md={5}>
+          <Col md={6}>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-              repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
+              Please use this form to contact either the McKee Glen HOA Board, or Hawthorne Property Management. All fields require input, except for the <em>Email Address</em> field which is read-only, pre-filled, with the the email address used to register your account for this website. Please
+              make note of these important details when using this form:
             </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-              repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-              repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
-            </p>
+            <ul>
+              <li>
+                <strong>Message Destination</strong>
+                <p>
+                  This field lets the HOA Board Secretary know where your message should be directed - all messages are initially received by the HOA Board Secretary. Messages marked for <em>Hawthorne Management</em> will be forwarded to Hawthorne Management Company within 24 hours of receipt by the
+                  HOA Board Secretary.
+                </p>
+              </li>
+            </ul>
           </Col>
-          <Col md={7}>
+          <Col md={6}>
             <ContactForm />
           </Col>
         </Row>

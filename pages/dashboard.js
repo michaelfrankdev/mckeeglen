@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
+import { BoxArrowUpRight } from 'react-bootstrap-icons'
 
 const Dashboard = () => {
   return (
@@ -12,8 +14,12 @@ const Dashboard = () => {
           <Col className="page-header">
             <h2 className="page-heading">Dashboard</h2>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-              repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
+              Welcome to the community member space of the website. Aside from the Contact page, this is the only other private space on the website. Documents and information private to our community will be posted here. If you have any content that you feel is beneficial to the community at large
+              and would like to see it posted, please use the form on the{' '}
+              <Link href="/contact" passHref>
+                <a>Contact page</a>
+              </Link>{' '}
+              to contact the HOA Board with your ideas.
             </p>
           </Col>
         </Row>
@@ -22,55 +28,40 @@ const Dashboard = () => {
             <h3 className="page-heading">Documents</h3>
             <ul>
               <li>
-                <p>Document #1</p>
+                <a href="https://drive.google.com/file/d/1fO8m2bYTKqIBAyZRlmlZcZoBzYGWfTY_/view?usp=sharing" target="_blank" rel="noreferrer">
+                  Architectural Review Committee Form
+                  <BoxArrowUpRight size={14} className="mx-2 mb-2" />
+                </a>
               </li>
               <li>
-                <p>Document #2</p>
+                <a href="https://drive.google.com/file/d/1I4FGmHPhHq9l5wY2WuTsKUpdC6thw9_W/view?usp=sharing" target="_blank" rel="noreferrer">
+                  Bylaws - Pond At McKee Glen
+                  <BoxArrowUpRight size={14} className="mx-2 mb-2" />
+                </a>
               </li>
               <li>
-                <p>Document #3</p>
+                <a href="https://drive.google.com/file/d/1E2DYfhBCHvJsGCnQUpYdXaSYatDQJNFd/view?usp=sharing" target="_blank" rel="noreferrer">
+                  CC&amp;Rs - Pond At McKee Glen
+                  <BoxArrowUpRight size={14} className="mx-2 mb-2" />
+                </a>
               </li>
             </ul>
           </Col>
           <Col md={4}>
             <h3 className="page-heading">Newsletters</h3>
             <ul>
-              <li>
-                <p>Edition 07.01.22 (Download)</p>
-              </li>
-              <li>
-                <p>Edition 06.01.22 (Download)</p>
-              </li>
-              <li>
-                <p>Edition 05.01.22 (Download)</p>
-              </li>
+              <li>Coming Soon</li>
             </ul>
           </Col>
           <Col md={4}>
             <h3 className="page-heading">Meetings</h3>
-            <p>Upcoming</p>
+            <h6>Upcoming</h6>
             <ul>
-              <li>
-                <p>07.21.22 (Agenda)</p>
-              </li>
-              <li>
-                <p>08.21.22 (Agenda)</p>
-              </li>
-              <li>
-                <p>09.21.22 (Agenda)</p>
-              </li>
+              <li>Coming Soon</li>
             </ul>
-            <p>Past</p>
+            <h6>Past</h6>
             <ul>
-              <li>
-                <p>05.21.22 (Minutes)</p>
-              </li>
-              <li>
-                <p>04.21.22 (Minutes)</p>
-              </li>
-              <li>
-                <p>03.21.22 (Minutes)</p>
-              </li>
+              <li>Coming Soon</li>
             </ul>
           </Col>
         </Row>

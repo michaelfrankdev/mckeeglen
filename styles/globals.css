@@ -1,34 +1,30 @@
-/* THEME COLOR PALATE: https://coolors.co/5f6b25-63553f-c2aa90-e1c09c-594736
+:root {
+  --green: rgb(66, 71, 48);
+  --dark-blue: rgb(47, 58, 61);
+  --blue: rgb(84, 97, 97);
+  --light-gray: rgb(173, 176, 166);
+  --gray: rgb(80, 82, 79);
+  --charcoal: rgb(31, 32, 29);
+  --white: rgb(230, 230, 230);
+  --import-font: 'Playfair Display', serif;
+}
 
-CSS HEX
---dark-olive-green: #5F6B25ff;
---umber: #63553Fff;
---khaki-web: #C2AA90ff;
---tan: #E1C09Cff;
---umber-2: #594736ff;
-
-SCSS RGB
-$dark-olive-green: rgba(95, 107, 37, 1);
-$umber: rgba(99, 85, 63, 1);
-$khaki-web: rgba(194, 170, 144, 1);
-$tan: rgba(225, 192, 156, 1);
-$umber-2: rgba(89, 71, 54, 1);
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 body {
   padding: 56px 0px 0px;
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgba(225, 192, 156, 0.7);
+  background-color: var(--white);
+  color: var(--charcoal);
 }
 
 .primaryHeader {
   height: 300px;
   width: 100%;
-  background-image: url('../public/images/pamc-hp-entrance-edit.png');
+  background-image: url('../public/images/pamc-hp-entrance.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -36,9 +32,14 @@ body {
   background-size: cover;
 }
 
-a {
-  color: inherit;
+a,
+a:hover {
+  color: var(--green);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 * {
@@ -51,23 +52,23 @@ a {
 }
 
 .page-heading {
-  font-family: 'Noto Serif', serif;
-  border-bottom: 1px solid rgb(99, 85, 63);
+  border-bottom: 1px solid var(--green);
   padding-bottom: 10px;
-  color: rgb(95, 107, 37)
+  font-family: var(--import-font);
+  color: var(--green);
 }
 
 
 /* REACT-BOOTSTRAP STYLE OVERRIDES - NAVBAR */
 
 .navbar {
-  background-color: rgb(89, 71, 54);
+  background-color: var(--dark-blue);
 }
 
 .navbar .navbar-brand,
 .navbar .navbar-brand:hover {
   font-family: 'Noto Serif', serif;
-  color: rgb(194, 170, 144);
+  color: var(--light-gray);
 }
 
 .navbar .navbar-toggler {
@@ -75,46 +76,51 @@ a {
 }
 
 .navbar .navbar-nav .nav-link {
-  color: rgb(194, 170, 144);
+  color: var(--light-gray);
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus {
-  color: rgb(225, 192, 156);
+  color: var(--white);
 }
 
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:active {
-  color: rgb(225, 192, 156);
-  filter: brightness(110%)
+  color: var(--white);
 }
 
 /* REACT-BOOTSTRAP STYLE OVERRIDES - INPUTS, FORM-CONTROL */
 
+.input-form {
+  padding: 20px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .form-control:focus,
 .form-select:focus {
-  border-color: rgb(225, 192, 156);
-  box-shadow: 0 0 0 .05rem rgba(225, 192, 156, 0.6);
+  border-color: var(--light-gray);
+  box-shadow: 0 0 0.5rem .05rem var(--white);
 }
 
 .formSubmitButton {
   margin-top: 20px;
-  background-color: rgb(95, 107, 37);
+  background-color: var(--dark-blue);
   border: none;
-  color: rgba(225, 255, 255, 0.8);
+  color: var(--white);
   letter-spacing: 0.4px;
 }
 
 .formSubmitButton:hover,
 .formSubmitButton:focus,
 .formSubmitButton:active {
-  background-color: rgb(95, 107, 37);
-  color: rgba(225, 255, 255, 0.8);
+  background-color: var(--dark-blue);
+  color: var(--white);
   filter: brightness(120%)
 }
 
 .formSubmitButton:focus {
-  box-shadow: 0 0 0 .05rem rgba(95, 107, 37, 0.6);
+  box-shadow: 0 0 0 .05rem var(--blue);
 }
 
 .form-control:disabled,
@@ -137,45 +143,15 @@ a {
   /* background-color: pink; */
 }
 
-/* REACT-BOOTSTRAP STYLE OVERRIDES - ACCORDION, HEADER, ITEM */
-
-/* $dark-olive-green: rgba(95, 107, 37, 1);
-$umber: rgba(99, 85, 63, 1);
-$khaki-web: rgba(194, 170, 144, 1);
-$tan: rgba(225, 192, 156, 1);
-$umber-2: rgba(89, 71, 54, 1); */
-
-.accordion-button:focus {
-  border-color: rgb(225, 192, 156);
-  box-shadow: 0 0 0 .25rem rgba(225, 192, 156, 0.6);
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: rgba(225, 192, 156, 1);
-  color: rgba(89, 71, 54, 1);
-}
-
-.accordion-button:not(.collapsed)::after {
-  filter: contrast(40%) brightness(50%);
-}
-
-.accordion-button.collapsed {
-  background-color: rgba(194, 170, 144, 1);
-  color: rgba(89, 71, 54, 1);
-}
-
-.accordion-button.collapsed::after {
-  filter: contrast(40%) brightness(50%);
-}
-
 /* FOOTER STYLES */
 
 .footer {
   padding: 20px 0px;
   text-align: center;
+  background-color: var(--white);
 }
 
 .footer .footer-statement {
   font-size: 12px;
-  color: rgba(99, 85, 63, 1);
+  color: var(--light-gray);
 }

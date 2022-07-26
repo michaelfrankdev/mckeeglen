@@ -103,12 +103,7 @@ const RegisterPanel = () => {
   }, [formErrors, formData, isSubmit])
 
   return (
-    <div
-      style={{
-        width: '80%',
-        margin: 'auto',
-        paddingTop: '20px',
-      }}>
+    <div className="input-form">
       {/* <pre>{JSON.stringify(formData, undefined, 2)}</pre> */}
       <h5 className="page-heading">Register</h5>
       <Form onSubmit={handleSignup}>

@@ -11,23 +11,27 @@ export default function Home() {
       <Container>
         <Row>
           <Col className="page-header">
-            <h2 className="page-heading">Welcome!</h2>
+            <h2 className="page-heading">Member Registration</h2>
           </Col>
         </Row>
         <Row>
           <Col md={8}>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-              repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
+              Thank you for taking a moment to register as a member of our community! Creating a user account for this website allows access to community-related news, documents and information. All that is required to register is an email address and a password; you will never be asked for other
+              information to register for this website. Please make note of the following:{' '}
             </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-              repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
-            </p>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error officia dicta, minus repudiandae est vel eius et dolorum, quia libero alias facilis vitae ipsa maiores id consectetur nobis quo magni cumque vero expedita placeat dolore! Iste obcaecati, doloribus optio vitae praesentium
-              repudiandae voluptate quisquam ipsam quos nobis voluptatibus excepturi at!
-            </p>
+            <ul>
+              <li>
+                <strong>Your personal information and privacy:</strong>
+                <p>
+                  <small>
+                    The email address you provide to create an account for accessing protected areas of this website is not shared or accessible to any third party that conducts business with <em>McKee Glen Homeowners Association</em> or <em>Hawthorne Management Company</em>. The email address you
+                    provide is stored to authenticate and authorize you as a user, allowing access to the protected area of this website. Additionally, the email address you provide will not be used for any purpose other than managing your account on your behalf when requested, for example, a
+                    password reset, which can be done by <a href="mailto:thepondatmckeeglen@gmail.com">emailing the McKee Glen Homeowners Association</a>.
+                  </small>
+                </p>
+              </li>
+            </ul>
           </Col>
           <Col md={4}>
             <RegisterPanel />

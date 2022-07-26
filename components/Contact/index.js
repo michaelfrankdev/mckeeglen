@@ -101,15 +101,7 @@ function ContactForm() {
     <>
       {/* <pre>{JSON.stringify(formData, null, 2)}</pre> */}
       {/* <pre>Error State: {JSON.stringify(formErrors, null, 2)}</pre> */}
-      <Form
-        style={{
-          width: '80%',
-          margin: 'auto',
-          padding: '20px',
-          borderRadius: '4px',
-          backgroundColor: 'rgba(255, 255, 255, 0.6)',
-        }}
-        onSubmit={handleSubmission}>
+      <Form className="input-form" onSubmit={handleSubmission}>
         <Row>
           <Col lg={6} md={12}>
             <Form.Group controlId="contactFirstName">
@@ -215,7 +207,7 @@ function ContactForm() {
             className={formErrors.enclosedMessageValid === false ? 'error-control' : 'form-control'}
             as="textarea"
             placeholder="Please enter your message here."
-            rows={5}
+            rows={7}
             onChange={(e) =>
               setFormData({
                 ...formData,
