@@ -22,7 +22,10 @@ export default function Home() {
           <Col>
             <p>Welcome to The Pond at McKee Glen&apos;s community website. Our community is the newest addition in the growing Town of Matthews, just east of Charlotte, North Carolina.</p>
             <p>
-              Our neighborhood is located on McKee Road, <a href="https://www.google.com/maps/place/35°04'56.1%22N+80°43'00.2%22W/@35.082262,-80.718901,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x208ea48af0845b3c!7e2!8m2!3d35.0822625!4d-80.7167065">situated between Pleasant Plains and Weddington Roads</a>
+              Our neighborhood is located on McKee Road,{' '}
+              <a href="https://www.google.com/maps/place/35°04'56.1%22N+80°43'00.2%22W/@35.082262,-80.718901,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x208ea48af0845b3c!7e2!8m2!3d35.0822625!4d-80.7167065" target="_blank" rel="noreferrer">
+                situated between Pleasant Plains and Weddington Roads
+              </a>
               <BoxArrowUpRight size={12} className="mx-1 mb-1" />, which are convenient to many stores and shops, namely within{' '}
               <a href="https://astonprop.propertycapsule.com/p/commercial-real-estate-listings/Matthews-NC-28105/mckeefarms#overview" target="_blank" rel="noreferrer">
                 McKee Farms
