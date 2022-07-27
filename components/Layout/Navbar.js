@@ -14,12 +14,14 @@ const Navigation = () => {
         <Navbar.Collapse id="primary-navigation">
           <Nav className="ms-auto">
             <>
-              <Link href="/">
-                <a className={router.pathname == '/' ? 'nav-link active' : 'nav-link'}>Home</a>
-              </Link>
-              <Link href="/about">
-                <a className={router.pathname == '/about' ? 'nav-link active' : 'nav-link'}>About</a>
-              </Link>
+              {user ? (
+                ''
+              ) : (
+                <Link href="/">
+                  <a className={router.pathname == '/' ? 'nav-link active' : 'nav-link'}>Home</a>
+                </Link>
+              )}
+
               <Link href="/faq">
                 <a className={router.pathname == '/faq' ? 'nav-link active' : 'nav-link'}>Community FAQs</a>
               </Link>

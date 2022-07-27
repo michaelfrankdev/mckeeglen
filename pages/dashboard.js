@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
-import { BoxArrowUpRight } from 'react-bootstrap-icons'
+import { ArrowUpRightSquare, BoxArrowUpRight } from 'react-bootstrap-icons'
 
 const Dashboard = () => {
   return (
@@ -18,8 +18,8 @@ const Dashboard = () => {
               and would like to see it posted, please use the form on the{' '}
               <Link href="/contact" passHref>
                 <a>Contact page</a>
-              </Link>{' '}
-              to contact the HOA Board with your ideas.
+              </Link>
+              <ArrowUpRightSquare size={14} className="mx-1 mb-1" /> to communicate with the HOA Board.
             </p>
           </Col>
         </Row>
@@ -30,19 +30,19 @@ const Dashboard = () => {
               <li>
                 <a href="https://drive.google.com/file/d/1fO8m2bYTKqIBAyZRlmlZcZoBzYGWfTY_/view?usp=sharing" target="_blank" rel="noreferrer">
                   Architectural Review Committee Form
-                  <BoxArrowUpRight size={14} className="mx-2 mb-2" />
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
               </li>
               <li>
                 <a href="https://drive.google.com/file/d/1I4FGmHPhHq9l5wY2WuTsKUpdC6thw9_W/view?usp=sharing" target="_blank" rel="noreferrer">
                   Bylaws - Pond At McKee Glen
-                  <BoxArrowUpRight size={14} className="mx-2 mb-2" />
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
               </li>
               <li>
                 <a href="https://drive.google.com/file/d/1E2DYfhBCHvJsGCnQUpYdXaSYatDQJNFd/view?usp=sharing" target="_blank" rel="noreferrer">
                   CC&amp;Rs - Pond At McKee Glen
-                  <BoxArrowUpRight size={14} className="mx-2 mb-2" />
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
               </li>
             </ul>

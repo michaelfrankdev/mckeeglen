@@ -24,7 +24,7 @@ body {
 .primaryHeader {
   height: 300px;
   width: 100%;
-  background-image: url('../public/images/pamc-hp-entrance.jpg');
+  background-image: url('../public/images/pamcg-hp-entrance.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -154,4 +154,14 @@ a:hover {
 .footer .footer-statement {
   font-size: 12px;
   color: var(--light-gray);
+}
+
+.accordion,
+.accordion-button {
+  filter: hue-rotate(179deg) grayscale(40%);
+}
+
+.accordion-body {
+  padding-left: 20px;
+  font-size: 15px;
 }
