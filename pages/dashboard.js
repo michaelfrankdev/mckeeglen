@@ -50,7 +50,13 @@ const Dashboard = () => {
           <Col md={4}>
             <h3 className="page-heading">Newsletters</h3>
             <ul>
-              <li>Coming Soon</li>
+              <li>
+                {' '}
+                <a href="https://drive.google.com/file/d/1VPUCxBC_dE-IO5LQ260tNqVONnJ1h_Ag/view" target="_blank" rel="noreferrer">
+                  March 2022
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                </a>
+              </li>
             </ul>
           </Col>
           <Col md={4}>
@@ -61,7 +67,30 @@ const Dashboard = () => {
             </ul>
             <h6>Past</h6>
             <ul>
-              <li>Coming Soon</li>
+              <li>
+                <a href="https://drive.google.com/file/d/1UjqpQLl3ZyEw2dhg5_aybJL-5YnvEuaL/view" target="_blank" rel="noreferrer">
+                  03/24/2022
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                </a>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1QM2OMYuWgzk5TSF4VizSt7ftqKKXk1tk/view" target="_blank" rel="noreferrer">
+                  05/05/2022
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                </a>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1gXYvJvbm6YVGEoZbMNdCYbHv-23cjcLG/view" target="_blank" rel="noreferrer">
+                  05/26/2022
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                </a>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1fpg9wNAlFYlNUfQwmIcKhzb8b5jxxCET/view" target="_blank" rel="noreferrer">
+                  06/27/2022
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                </a>
+              </li>
             </ul>
           </Col>
         </Row>
