@@ -63,7 +63,7 @@ const Dashboard = () => {
             <h3 className="page-heading">Meetings</h3>
             <h6>Upcoming</h6>
             <ul>
-              <li>Coming Soon</li>
+              <li>No meetings are scheduled at this time.</li>
             </ul>
             <h6>Past</h6>
             <ul>
