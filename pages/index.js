@@ -54,7 +54,7 @@ export default function Home() {
                 Eastwood Homes
                 <BoxArrowUpRight size={12} className="mx-1 mb-1" />
               </a>{' '}
-              between 2021 and 2022. The Pond at McKee Glen Homeowner&apos;s Association works in cooperation with{' '}
+              between 2019 and 2021. The Pond at McKee Glen Homeowner&apos;s Association works in cooperation with{' '}
               <a href="https://www.hawthornemgmt.com" target="_blank" rel="noreferrer">
                 Hawthorne Management Company
                 <BoxArrowUpRight size={12} className="mx-1 mb-1" />
