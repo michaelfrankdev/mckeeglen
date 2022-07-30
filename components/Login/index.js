@@ -41,13 +41,11 @@ const LoginPanel = () => {
         router.push('/dashboard')
       } catch (error) {
         console.log(error)
-        console.log(error.code)
-        console.log(error.message)
         switch (error.code) {
           case 'auth/user-not-found':
             setFormErrors({
               ...formErrors,
-              email: 'Firebase: Email address not found.',
+              email: 'Email address not found.',
               password: '',
               emailValid: false,
               passwordValid: true,
@@ -56,7 +54,7 @@ const LoginPanel = () => {
           case 'auth/invalid-email':
             setFormErrors({
               ...formErrors,
-              email: 'Firebase: The email address is not valid.',
+              email: 'The email address is not valid.',
               password: '',
               emailValid: false,
               passwordValid: true,
@@ -66,7 +64,7 @@ const LoginPanel = () => {
             setFormErrors({
               ...formErrors,
               email: '',
-              password: 'Firebase: Incorrect password. Please try again.',
+              password: 'Incorrect password. Please try again.',
               emailValid: true,
               passwordValid: false,
             })

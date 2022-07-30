@@ -42,13 +42,11 @@ const RegisterPanel = () => {
         router.push('/dashboard')
       } catch (error) {
         console.log(error)
-        console.log(error.code)
-        console.log(error.message)
         switch (error.code) {
           case 'auth/invalid-email':
             setFormErrors({
               ...formErrors,
-              email: 'Firebase: The email address is not valid.',
+              email: 'The email address is not valid.',
               password: '',
               emailValid: false,
               passwordValid: true,
@@ -57,7 +55,7 @@ const RegisterPanel = () => {
           case 'auth/email-already-in-use':
             setFormErrors({
               ...formErrors,
-              email: 'Firebase: Email address is already registered.',
+              email: 'Email address is already registered.',
               password: '',
               emailValid: false,
               passwordValid: true,
@@ -67,7 +65,7 @@ const RegisterPanel = () => {
             setFormErrors({
               ...formErrors,
               email: '',
-              password: 'Firebase: Please set a password greater than six characters.',
+              password: 'Please set a password greater than six characters.',
               emailValid: true,
               passwordValid: false,
             })
