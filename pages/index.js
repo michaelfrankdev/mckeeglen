@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 import LoginPanel from '../components/Login'
 import { useAuth } from '../context/AuthContext'
 import { BoxArrowUpRight } from 'react-bootstrap-icons'
-import Image from 'next/image'
 
 export default function Home() {
   const { user } = useAuth()
