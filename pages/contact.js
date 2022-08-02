@@ -20,16 +20,22 @@ const Contact = () => {
         <Row>
           <Col md={6}>
             <p>
-              Please use this form to contact either the McKee Glen HOA Board, or Hawthorne Property Management. All fields require input, except for the <em>Email Address</em> field which is read-only, pre-filled, with the the email address used to register your account for this website. Please
-              make note of these important details when using this form:
+              Please use this form to contact the McKee Glen HOA Board. All fields require input, except for the <em>Email Address</em> field which is read-only, pre-filled, with the the email address used to register for this website.
             </p>
+            <p>To reach Hawthorne Management Company, please contact Association Manager Holly Browning using the following information:</p>
             <ul>
               <li>
-                <strong>Message Destination</strong>
                 <p>
-                  This field lets the HOA Board Secretary know where your message should be directed - all messages are initially received by the HOA Board Secretary. Messages marked for <em>Hawthorne Management</em> will be forwarded to Hawthorne Management Company within 24 hours of receipt by the
-                  HOA Board Secretary.
+                  Email: <a href="mailto:hbrowning@hawthornemgmt.com">hbrowning@hawthornemgmt.com</a>
                 </p>
+              </li>
+              <li>
+                <p>
+                  Phone: <a href="tel:704-377-0114">704-377-0114</a>, extension 119
+                </p>
+              </li>
+              <li>
+                <p>Fax: 704-347-4475</p>
               </li>
             </ul>
           </Col>
