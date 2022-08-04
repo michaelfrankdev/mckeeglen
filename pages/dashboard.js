@@ -94,14 +94,8 @@ const Dashboard = () => {
             <h6>Past (Minutes)</h6>
             <ul>
               <li>
-                <a href="https://drive.google.com/file/d/1UjqpQLl3ZyEw2dhg5_aybJL-5YnvEuaL/view" target="_blank" rel="noreferrer">
-                  03/24/2022
-                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
-                </a>
-              </li>
-              <li>
-                <a href="https://drive.google.com/file/d/1QM2OMYuWgzk5TSF4VizSt7ftqKKXk1tk/view" target="_blank" rel="noreferrer">
-                  05/05/2022
+                <a href="https://drive.google.com/file/d/1fpg9wNAlFYlNUfQwmIcKhzb8b5jxxCET/view" target="_blank" rel="noreferrer">
+                  06/27/2022
                   <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
               </li>
@@ -112,8 +106,14 @@ const Dashboard = () => {
                 </a>
               </li>
               <li>
-                <a href="https://drive.google.com/file/d/1fpg9wNAlFYlNUfQwmIcKhzb8b5jxxCET/view" target="_blank" rel="noreferrer">
-                  06/27/2022
+                <a href="https://drive.google.com/file/d/1QM2OMYuWgzk5TSF4VizSt7ftqKKXk1tk/view" target="_blank" rel="noreferrer">
+                  05/05/2022
+                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                </a>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1UjqpQLl3ZyEw2dhg5_aybJL-5YnvEuaL/view" target="_blank" rel="noreferrer">
+                  03/24/2022
                   <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
               </li>
