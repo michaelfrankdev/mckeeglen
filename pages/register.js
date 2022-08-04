@@ -26,8 +26,8 @@ export default function Home() {
                 <p>
                   <small>
                     The email address you provide to create an account for accessing protected areas of this website is not shared or accessible to any third party that conducts business with <em>McKee Glen Homeowners Association</em> or <em>Hawthorne Management Company</em>. The email address you
-                    provide is stored to authenticate and authorize you as a user, allowing access to the protected area of this website. Additionally, the email address you provide will not be used for any purpose other than managing your account on your behalf when requested, for example, a
-                    password reset, which can be done by <a href="mailto:thepondatmckeeglen@gmail.com">emailing the McKee Glen Homeowners Association</a>.
+                    provide is stored to authenticate and authorize you as a user, allowing access to private and protected areas of this website. Additionally, the email address you provide will not be used for any purpose other than managing your account on your behalf when requested, for example,
+                    a password reset, which can be done by <a href="mailto:thepondatmckeeglen@gmail.com">emailing the McKee Glen Homeowners Association</a>.
                   </small>
                 </p>
               </li>
