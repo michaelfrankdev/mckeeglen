@@ -11,7 +11,7 @@ function ContactForm() {
     firstName: '',
     lastName: '',
     emailAddress: user.email,
-    attentionField: '',
+    // attentionField: '',
     messageSubject: '',
     enclosedMessage: '',
   }
@@ -21,7 +21,7 @@ function ContactForm() {
     firstName: '',
     lastName: '',
     emailAddress: user.email,
-    attentionField: '',
+    // attentionField: '',
     messageSubject: '',
     enclosedMessage: '',
   })
@@ -31,13 +31,13 @@ function ContactForm() {
     firstName: '',
     lastName: '',
     emailAddress: '',
-    attentionField: '',
+    // attentionField: '',
     messageSubject: '',
     enclosedMessage: '',
     firstNameValid: '',
     lastNameValid: '',
     emailAddressValid: '',
-    attentionFieldValid: '',
+    // attentionFieldValid: '',
     messageSubjectValid: '',
     enclosedMessageValid: '',
   })
@@ -82,10 +82,10 @@ function ContactForm() {
       errors.lastName = 'A last name is required to continue.'
       errors.lastNameValid = false
     }
-    if (!formDataInput.attentionField) {
-      errors.attentionField = 'A selection is required to continue.'
-      errors.attentionFieldValid = false
-    }
+    // if (!formDataInput.attentionField) {
+    //   errors.attentionField = 'A selection is required to continue.'
+    //   errors.attentionFieldValid = false
+    // }
     if (!formDataInput.messageSubject) {
       errors.messageSubject = 'A subject line is required to continue.'
       errors.messageSubjectValid = false
@@ -157,7 +157,7 @@ function ContactForm() {
             {formErrors.emailAddress}
           </div>
         </Form.Group>
-        <Form.Group>
+        {/* <Form.Group>
           <Form.Label>
             Message Destination<sup>*</sup>
           </Form.Label>
@@ -178,7 +178,7 @@ function ContactForm() {
           <div id="formAttentionFieldError" className="error-message">
             {formErrors.attentionField}
           </div>
-        </Form.Group>
+        </Form.Group> */}
         <Form.Group controlId="contactMessageSubject">
           <Form.Label>
             Subject<sup>*</sup>
