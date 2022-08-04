@@ -23,7 +23,7 @@ const Dashboard = () => {
             </p>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col className="mb-4">
             <h2 className="page-heading">Important Announcement</h2>
             <p>
@@ -34,7 +34,7 @@ const Dashboard = () => {
               <ArrowUpRightSquare size={14} className="mx-1 mb-1" /> to fill out the form.
             </p>
           </Col>
-        </Row>
+        </Row> */}
         <Row>
           <Col className="mb-4" lg={4} md={6}>
             <h3 className="page-heading">Documents</h3>
@@ -63,9 +63,9 @@ const Dashboard = () => {
             <h3 className="page-heading">Newsletters</h3>
             <ul>
               <li>
-                {' '}
+                March 2022{' '}
                 <a href="https://drive.google.com/file/d/1VPUCxBC_dE-IO5LQ260tNqVONnJ1h_Ag/view" target="_blank" rel="noreferrer">
-                  March 2022
+                  (View)
                   <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
               </li>
@@ -75,8 +75,9 @@ const Dashboard = () => {
             <h3 className="page-heading">Upcoming Events</h3>
             <ul>
               <li>
-                <a href="#" target="_blank" rel="noreferrer">
-                  SummerBash
+                SummerBash{' '}
+                <a href="https://drive.google.com/file/d/1IZogOt3D6Olv7awwNJYSjGwcRMBEOwLz/view" target="_blank" rel="noreferrer">
+                  (Details)
                   <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
                 <br />
