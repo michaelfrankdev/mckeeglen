@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { Button, Form } from 'react-bootstrap'
+import { Modal, Button, Form, Row, Col } from 'react-bootstrap'
 import { useAuth } from '../../context/AuthContext'
 
 const LoginPanel = () => {
@@ -24,6 +24,9 @@ const LoginPanel = () => {
 
   // INITIALIZE STATE FOR SUBMIT STATUS
   const [isSubmit, setIsSubmit] = useState(false)
+
+  // INITIALIZE MODAL FOR CONTEXT MESSAGES
+  const [modalVisibility, setModalVisibility] = useState(false)
 
   // PROCESS LOGIN INPUT & DATA
   const handleLogin = async (e) => {
@@ -103,54 +106,91 @@ const LoginPanel = () => {
     }
   }, [formErrors, formData, isSubmit])
 
-  return (
-    <div className="input-form">
-      {/* <pre>{JSON.stringify(formErrors, null, 2)}</pre> */}
-      {/* <pre>{JSON.stringify(formData, undefined, 2)}</pre> */}
-      <h5 className="page-heading">Login</h5>
-      <Form onSubmit={handleLogin}>
-        <Form.Group controlId="loginEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            className={formErrors.emailValid === false ? 'error-control' : 'form-control'}
-            onChange={(e) =>
-              setFormData({
-                ...formData,
-                email: e.target.value,
-              })
-            }
-            value={formData.email}
-            type="text"
-            placeholder="Enter email"
-          />
-          <div id="loginEmailError" className="error-message">
-            {formErrors.email}
-          </div>
-        </Form.Group>
+  // HANDLE MODAL STATE
+  const handleClose = () => setModalVisibility(false)
+  const handleShow = () => setModalVisibility(true)
 
-        <Form.Group controlId="loginPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            className={formErrors.passwordValid === false ? 'error-control' : 'form-control'}
-            onChange={(e) =>
-              setFormData({
-                ...formData,
-                password: e.target.value,
-              })
-            }
-            value={formData.password}
-            type="password"
-            placeholder="Password"
-          />
-        </Form.Group>
-        <div id="loginEmailError" className="error-message">
-          {formErrors.password}
-        </div>
-        <Button className="formSubmitButton" type="submit">
-          Login
-        </Button>
-      </Form>
-    </div>
+  return (
+    <>
+      <div className="input-form">
+        {/* <pre>{JSON.stringify(formErrors, null, 2)}</pre> */}
+        {/* <pre>{JSON.stringify(formData, undefined, 2)}</pre> */}
+        <h5 className="page-heading">Login</h5>
+        <Form onSubmit={handleLogin}>
+          <Row>
+            {/* EMAIL */}
+            <Form.Group controlId="loginEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                className={formErrors.emailValid === false ? 'error-control' : 'form-control'}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    email: e.target.value,
+                  })
+                }
+                value={formData.email}
+                type="text"
+                placeholder="Enter email"
+              />
+              <div id="loginEmailError" className="error-message">
+                {formErrors.email}
+              </div>
+            </Form.Group>
+            {/* PASSWORD */}
+          </Row>
+          <Row>
+            <Form.Group controlId="loginPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                className={formErrors.passwordValid === false ? 'error-control' : 'form-control'}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    password: e.target.value,
+                  })
+                }
+                value={formData.password}
+                type="password"
+                placeholder="Password"
+              />
+              <div id="loginEmailError" className="error-message">
+                {formErrors.password}
+              </div>
+            </Form.Group>
+          </Row>
+          <Row>
+            <Col sm={4}>
+              <Button className="formSubmitButton" type="submit">
+                Login
+              </Button>
+            </Col>
+            <Col sm={8}>
+              <a className="btn pt-4" onClick={handleShow}>
+                Forgot Password?
+              </a>
+            </Col>
+          </Row>
+        </Form>
+      </div>
+      {/* <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button> */}
+
+      <Modal show={modalVisibility} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Password Reset</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          If you have forgotten your password, please send an email to our website team at <a href="mailto:thepondatmckeeglen@gmail.com">thepondatmckeeglen@gmail.com</a>.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   )
 }
 
