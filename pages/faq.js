@@ -28,6 +28,13 @@ const Faq = () => {
                 <Accordion.Body>
                   <p>Trash and yard waste is colleted every Tuesday, whereas recycling is collected every other Tuesday.</p>
                   <p>
+                    For information on when recycling is collected for your residence, please refer to{' '}
+                    <a href="https://charlottenc.gov/SWS/Pages/Recycling-Collection-Schedule.aspx" target="_blank" rel="noreferrer">
+                      this page
+                    </a>
+                    <BoxArrowUpRight size={12} className="mx-1 mb-1" />.
+                  </p>
+                  <p>
                     For information on how to prepare yard waste, please refer to{' '}
                     <a href="https://charlottenc.gov/SWS/Pages/Yard-Waste-Collection.aspx" target="_blank" rel="noreferrer">
                       this page
@@ -36,11 +43,33 @@ const Faq = () => {
                   </p>
                 </Accordion.Body>
               </Accordion.Item>
-              {/* <Accordion.Item eventKey="e1">
+
+              <Accordion.Item eventKey="e000">
+                <Accordion.Header>What items should be placed inside my recycling cart?</Accordion.Header>
+                <Accordion.Body>
+                  <p>
+                    While Mecklenburg County has a robust recycling program, there are still things you should <em>never</em> put in your <em>curbside</em> recycling cart.
+                  </p>
+                  <p>
+                    Some notable items that are prohibited from being included in recycling carts are <strong>plastic bags</strong>, <strong>trash</strong> and <strong>shredded paper</strong>. For your convenience, an exhaustive list can be found{' '}
+                    <a href="https://www.mecknc.gov/LUESA/SolidWaste/Disposal-Recycling/Pages/what-can-and-cannot-be-recycled.aspx" target="_blank" rel="noreferrer">
+                      listed on Mecklenburg County&apos;s website
+                    </a>
+                    .
+                    <BoxArrowUpRight size={12} className="mx-1 mb-1" />.
+                  </p>
+                </Accordion.Body>
+              </Accordion.Item>
+              {/* <Accordion.Item eventKey="e000">
                 <Accordion.Header>Accordion Item #2</Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                  voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt {' '}
+                    <a href="https://www.google.com" target="_blank" rel="noreferrer">
+                      mollit anim id est laborum
+                    </a>.
+                    <BoxArrowUpRight size={12} className="mx-1 mb-1" />.
+                  </p>
                 </Accordion.Body>
               </Accordion.Item> */}
               <h4 className="page-heading my-4">If you&apos;ll be joining us ...</h4>

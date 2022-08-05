@@ -143,7 +143,7 @@ const RegisterPanel = () => {
           {formErrors.password}
         </div>
         <Button className="formSubmitButton" type="submit">
-          Login
+          Register and Login
         </Button>
       </Form>
     </div>
