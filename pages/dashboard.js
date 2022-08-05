@@ -41,7 +41,7 @@ const Dashboard = () => {
             <ul>
               <li>
                 <a href="https://drive.google.com/file/d/1fO8m2bYTKqIBAyZRlmlZcZoBzYGWfTY_/view?usp=sharing" target="_blank" rel="noreferrer">
-                  Architectural Review Committee Form
+                  Architectural Review Form
                   <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                 </a>
               </li>
