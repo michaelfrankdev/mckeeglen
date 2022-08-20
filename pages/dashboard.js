@@ -65,8 +65,10 @@ const Dashboard = () => {
               <li>
                 March 2022{' '}
                 <a href="https://drive.google.com/file/d/1VPUCxBC_dE-IO5LQ260tNqVONnJ1h_Ag/view" target="_blank" rel="noreferrer">
-                  (View)
-                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                  <small>
+                    View
+                    <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                  </small>
                 </a>
               </li>
             </ul>
@@ -77,11 +79,24 @@ const Dashboard = () => {
               <li>
                 SummerBash{' '}
                 <a href="https://drive.google.com/file/d/1IZogOt3D6Olv7awwNJYSjGwcRMBEOwLz/view" target="_blank" rel="noreferrer">
-                  (Details)
-                  <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                  <small>
+                    Details
+                    <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                  </small>
                 </a>
                 <br />
                 08/20/2022, 11am - 2pm
+              </li>
+              <li>
+                Community Yard Sale{' '}
+                <a href="https://drive.google.com/file/d/1-VGtHZLjWbTuYfxFveWbmrFFRKROavy0/view" target="_blank" rel="noreferrer">
+                  <small>
+                    Details
+                    <BoxArrowUpRight size={12} className="mx-1 mb-1" />
+                  </small>
+                </a>
+                <br />
+                09/17/2022, 7am - 12pm
               </li>
             </ul>
           </Col>
