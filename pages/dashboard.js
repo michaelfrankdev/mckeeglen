@@ -76,7 +76,7 @@ const Dashboard = () => {
           <Col className="mb-4" lg={3} md={6}>
             <h3 className="page-heading">Upcoming Events</h3>
             <ul>
-              <li>
+              {/* <li>
                 SummerBash{' '}
                 <a href="https://drive.google.com/file/d/1IZogOt3D6Olv7awwNJYSjGwcRMBEOwLz/view" target="_blank" rel="noreferrer">
                   <small>
@@ -86,17 +86,18 @@ const Dashboard = () => {
                 </a>
                 <br />
                 08/20/2022, 11am - 2pm
-              </li>
+              </li> */}
               <li>
                 Community Yard Sale{' '}
                 <a href="https://drive.google.com/file/d/1-VGtHZLjWbTuYfxFveWbmrFFRKROavy0/view" target="_blank" rel="noreferrer">
+                  <br />
+                  09/17/2022, 7am - 12pm
+                  <br />
                   <small>
                     Details
                     <BoxArrowUpRight size={12} className="mx-1 mb-1" />
                   </small>
                 </a>
-                <br />
-                09/17/2022, 7am - 12pm
               </li>
             </ul>
           </Col>
